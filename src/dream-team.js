@@ -4,22 +4,23 @@ module.exports = function createDreamTeam(members) {
     return false;
   } 
   
- if (members == []) {
-    throw new UserException("error");
-  }
+  if (members == []) {
+      throw new UserException("error");
+    }
    
-    let k = '';
+  let k = '';
 
-      members.forEach(elem => {
-        if (typeof(elem) === 'number' || typeof(elem) === 'boolean' || typeof(elem) === 'object' || elem === null || elem === undefined) {
+  members.forEach(elem => {
+    if (typeof(elem) === 'number' || typeof(elem) === 'boolean' || typeof(elem) === 'object' || elem === null || elem === undefined) {
 
-             return false;
-        } else {
-          k += elem.trim().toUpperCase().replace(/\s+/g, '').split('').slice(0,1).join('');
-        };
-          });
+          return false;
+    } else {
+      k += elem.trim().toUpperCase().replace(/\s+/g, '').split('').slice(0,1).join('');
+    };
+      });
 
-       let result = k.split('').sort().join('');
-       return result;
-  };
+  let result = k.split('').sort().join('');
+  
+  return result;
+};
   
