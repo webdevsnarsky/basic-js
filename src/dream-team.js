@@ -1,3 +1,5 @@
+const CustomError = require("../extensions/custom-error");
+
 module.exports = function createDreamTeam(members) {
   
   if (typeof(members) === 'number' || typeof(members) === 'boolean' || !members || Array.isArray(members) === false) {
@@ -23,4 +25,3 @@ module.exports = function createDreamTeam(members) {
   
   return result;
 };
-  

@@ -1,3 +1,5 @@
+const CustomError = require("../extensions/custom-error");
+
 module.exports = function getSeason(date) {
   let result = '';
 
@@ -23,4 +25,4 @@ module.exports = function getSeason(date) {
 
   return result;
   
-};
+}
